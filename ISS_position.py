@@ -10,8 +10,12 @@ the_page = response.read()
 json_dump = json.loads(the_page)
 
 #If the Api returned data successfully
-if json_dump['message'] ==githib "success":
+if json_dump['message'] == "success":
+    print(datetime.fromtimestamp(1592059775))
     Nowtime = datetime.fromtimestamp(json_dump['timestamp'])
+
+
+    print(json_dump['timestamp'])
     print("Signal acquired successfully at: " + str(Nowtime))
     print("Current ISS co-ordinates are: Latitude " + str(json_dump['iss_position']['latitude']) + " Longitude: " + str(json_dump['iss_position']['longitude']))
 else:
